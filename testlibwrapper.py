@@ -1,6 +1,7 @@
 import ctypes
 from tkinter import Tk, Label, Button
 from PIL import Image, ImageTk
+import time
 
 # Carregar a biblioteca C
 testlib = ctypes.CDLL('C:\\msys64\\usr\\bin\\teste.dll')
