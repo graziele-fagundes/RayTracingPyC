@@ -1,6 +1,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <float.h>
+#include "utils.h"
+#include "scene.h"
 
 typedef struct HitPayload {
     float hitDistance;
@@ -15,41 +17,10 @@ typedef struct Ray {
     float direction[3];
 } s_ray;
 
-float *normalize(float *arr, int size);
 s_hitPayload TraceRay(s_ray ray);
 s_hitPayload ClosestHit(s_ray ray, int objectIndex, float hitDistance);
 s_hitPayload Miss(s_ray ray);
 int PerPixel(float x, float y);
-float dotProduct(float *a, float *b);
-void reflect(float *direction, float *normal, float *reflected);
-
-
-typedef struct Sphere {
-    float position[3];
-    float radius;
-    float color[3];
-}s_sphere;
-
-typedef struct Scene {
-    struct Sphere *spheres;
-    int numSpheres;
-}s_scene;
-
-s_scene scene = {
-    .spheres = (s_sphere[]) {
-        {
-            .position = {0, 0.025, 0},
-            .radius = 0.02,
-            .color = {255, 0, 255}
-        },
-        {
-            .position = {0, -0.1, 0},
-            .radius = 0.08,
-            .color = {51, 77, 255}
-        },
-    },
-    .numSpheres = 2
-};
 
 s_hitPayload ClosestHit(s_ray ray, int objectIndex, float hitDistance){
 
@@ -92,7 +63,6 @@ s_hitPayload Miss(s_ray ray){
 }
 
 int PerPixel(float x, float y){
-    // Initialize the ray
     s_ray ray = {
         .origin = {0, 0, 0.2},
         .direction = {x, -y, -1.0}
@@ -104,7 +74,7 @@ int PerPixel(float x, float y){
     int colorG = 0;
     int colorB = 0;
 
-    int skyColorR = 0; // Sky blue
+    int skyColorR = 0; 
     int skyColorG = 0;
     int skyColorB = 0;
 
@@ -196,37 +166,4 @@ s_hitPayload TraceRay(s_ray ray) {
     }
 
     return ClosestHit(ray, closestSphere, hitDistance);
-}
-
-
-
-
-float *normalize(float *arr, int size) {
-    float denominator = sqrt(pow(arr[0], 2) + pow(arr[1], 2) + pow(arr[2], 2));
-
-    for (int i = 0; i < size; i++) {
-        arr[i] = arr[i] / denominator;
-    }
-
-    return arr;
-}
-
-float dotProduct(float *a, float *b) {
-    float result = 0;
-
-    for (int i = 0; i < 3; i++) {
-        result += a[i] * b[i];
-    }
-
-    return result;
-}
-
-void reflect(float *direction, float *normal, float *reflected) {
-    // Calculate the dot product of the direction and normal
-    float dot = dotProduct(direction, normal);
-
-    // Calculate the reflected vector
-    for (int i = 0; i < 3; i++) {
-        reflected[i] = direction[i] - 2.0 * dot * normal[i];
-    }
 }
