@@ -1,17 +1,14 @@
 # Uma implementação gráfica de Ray Tracing Recursivo utilizando em conjunto Python e C.
 
 # Requerimentos
-Python, Tkinter e Pillow
+Python e pillow
 
 # Rodando o projeto
-Para rodar o projeto verfique que você possui as bibliotecas necessárias rodandos os comandos:
-```
-pip install tkinter
-```
+Para rodar o projeto verfique que você possui a biblioteca necessária rodando o comando:
 ```
 pip install pillow
 ```
-Após instaladas só resta rodar código python:
+Após instalada só resta rodar o código python:
 ```
 python ./interface.py
 ```
