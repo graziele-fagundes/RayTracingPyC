@@ -11,7 +11,7 @@ pip install tkinter
 ```
 pip install pillow
 ```
-Após instaladas só restar rodar código python:
+Após instaladas só resta rodar código python:
 ```
 python ./interface.py
 ```
