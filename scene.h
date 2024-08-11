@@ -29,6 +29,18 @@ s_scene scene = {
             .material.color = {51, 77, 255},
             .material.roughness = 0.1
         },
+        {
+            .position = {0.04, -0.005, 0.035},
+            .radius = 0.015,
+            .material.color = {115, 62, 156},
+            .material.roughness = 0.1
+        },
+        {
+            .position = {-0.04, -0.005, 0.035},
+            .radius = 0.015,
+            .material.color = {156, 62, 118},
+            .material.roughness = 0.1
+        }
     },
-    .numSpheres = 2
+    .numSpheres = 4
 };

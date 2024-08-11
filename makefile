@@ -18,7 +18,7 @@ CFLAGS=-fPIC -shared -o
 all: build run
 
 # Alvo para compilar a DLL
-build: $(SOURCES)
+build:
 	$(CC) $(CFLAGS) $(SO_NAME) $(SOURCES)
 
 # Alvo para executar o script Python
