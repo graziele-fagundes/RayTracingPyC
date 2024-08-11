@@ -64,7 +64,7 @@ s_hitPayload Miss(s_ray ray){
 
 int PerPixel(float x, float y){
     s_ray ray = {
-        .origin = {0, 0, 0.2},
+        .origin = {0, 0.01, 0.1},
         .direction = {x, -y, -1.0}
     };
     
@@ -74,9 +74,9 @@ int PerPixel(float x, float y){
     int colorG = 0;
     int colorB = 0;
 
-    int skyColorR = 0; 
-    int skyColorG = 0;
-    int skyColorB = 0;
+    int skyColorR = 153; 
+    int skyColorG = 178;
+    int skyColorB = 230;
 
     float multiplier = 1.0f;
 
@@ -86,7 +86,7 @@ int PerPixel(float x, float y){
     lightDir[1] = -lightDir[1];
     lightDir[2] = -lightDir[2];
 
-    int bounces = 2;
+    int bounces = 5;
     for (int i = 0; i < bounces; i++){
         s_hitPayload HitPayload = TraceRay(ray);
 
@@ -100,21 +100,26 @@ int PerPixel(float x, float y){
         float lightIntensity = fmaxf(dotProduct(HitPayload.WorldNormal, lightDir), 0.0f);
 
         s_sphere *Sphere = &scene.spheres[HitPayload.ObjectIndex];
-        int red = Sphere->color[0];
-        int green = Sphere->color[1];
-        int blue = Sphere->color[2];
+        int red = Sphere->material.color[0];
+        int green = Sphere->material.color[1];
+        int blue = Sphere->material.color[2];
 
         colorR += (int)(red * lightIntensity * multiplier);
         colorG += (int)(green * lightIntensity * multiplier);
         colorB += (int)(blue * lightIntensity * multiplier);
 
-        multiplier *= 0.7f;
+        multiplier *= 0.5f;
 
         for (int i = 0; i < 3; i++){
             ray.origin[i] = HitPayload.WorldPosition[i] + HitPayload.WorldNormal[i] * 0.001f;
         }
 
         float reflectedDirection[3];
+        float randomVec3[3];
+        randomVector3(randomVec3, -0.5, 0.5);
+        scalarMultiply(randomVec3, Sphere->material.roughness);
+        sum(randomVec3, HitPayload.WorldNormal, HitPayload.WorldNormal);
+
         reflect(ray.direction, HitPayload.WorldNormal, reflectedDirection);
 
         for (int i = 0; i < 3; i++){

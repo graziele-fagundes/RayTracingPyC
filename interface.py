@@ -3,7 +3,7 @@ from tkinter import Tk, Label
 from PIL import Image, ImageTk
 
 
-PATH = 'C:\\msys64\\usr\\bin\\raytracing.dll'
+PATH = './raytracing.dll'
 raytracing = ctypes.CDLL(PATH)
 raytracing.PerPixel.argtypes = [ctypes.c_float, ctypes.c_float]
 raytracing.PerPixel.restype = ctypes.c_int
