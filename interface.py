@@ -39,11 +39,18 @@ def render(width, height, scale):
     return img
 
 root = Tk()
-root.title("Imagem gerada por ray tracing")
-root.geometry("1280x960")  
 
 scale = 2.0
 width, height = 1280, 960
+
+root.title("Imagem gerada por ray tracing")
+
+# Centralizar a janela
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x_position = (screen_width - width) // 2
+y_position = (screen_height - height) // 2
+root.geometry(f"{width}x{height}+{x_position}+{y_position}")
 
 print("Rendering image...")
 start_time = time.time()
@@ -51,7 +58,6 @@ image = render(width, height, scale)
 end_time = time.time()
 render_time = end_time - start_time
 print("Image rendered in", render_time, "seconds")
-
 
 image_tk = ImageTk.PhotoImage(image)
 

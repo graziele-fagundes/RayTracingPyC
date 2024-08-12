@@ -1,11 +1,15 @@
-# Nome do executável da DLL
+# Nome do executável gerado
 SO_NAME=raytracing.so
 
 # Arquivos fonte
 SOURCES=raytracing.c utils.c
 
-# Comando Python
-PYTHON=python
+# Detectando o sistema operacional
+ifeq ($(OS),Windows_NT)
+    PYTHON=python
+else
+    PYTHON=python3
+endif
 
 # Nome do script Python
 PYTHON_SCRIPT=interface.py
