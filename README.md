@@ -1,6 +1,11 @@
 # Ray Tracing Recursivo
 Uma implementação gráfica de Ray Tracing Recursivo utilizando em conjunto Python e C. 
 
+João Vitor Farias Silva (jvfsilva@inf.ufpel.edu.br)
+
+Graziele Fagundes Martins (gfmartins@inf.ufpel.edu.br)
+
+
 Para saber mais detalhes da implementação acesse: **[Documentação](https://docs.google.com/document/d/1wjuW1kJKHCUQf5og_3ERMouvzWpndZdGRIGXOz40tPk/edit?usp=sharing)**
 
 Repositório composto pelos seguintes arquivos:
