@@ -7,8 +7,8 @@ Repositório composto pelos seguintes arquivos:
 - Arquivos extras: arquivos de utilidade para o projeto.
   - .gitignore: arquivo de configuração que especifica quais arquivos e diretórios devem ser ignorados pelo Git
   - makefile: arquivo de automação de compilação
-  - scene.h: especifica os objetos inclusos na cena renderizada
-  - utils.h/utils.c: Funções úteis para a execução dos cálculos necessários
+  - scene.h: arquivo que especifica os objetos inclusos na cena renderizada
+  - utils.h/utils.c: arquivo com funções úteis para a execução dos cálculos necessários
 
 ## Linux
 
