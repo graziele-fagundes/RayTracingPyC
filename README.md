@@ -33,4 +33,14 @@ python3 interface.py
 ## Windows
 Antes de executar o projeto, é essencial garantir que os seguintes pacotes estejam instalados:
 - **gcc:**
-Para instalar gcc no windows recomendamos seguir o seguinte tutorial: [Como Instalar GCC/G++ MinGW no Windows](https://terminalroot.com.br/2022/12/como-instalar-gcc-gpp-mingw-no-windows.html)
+Para instalar o pacote gcc no Windows, recomendamos seguir o seguinte tutorial: [Como Instalar GCC/G++ MinGW no Windows](https://terminalroot.com.br/2022/12/como-instalar-gcc-gpp-mingw-no-windows.html)
+- **python:**
+Para instalar Python no Windows, recomendamos a seguinte página: [Python](https://www.python.org/downloads/windows/)
+- **tkinter:**
+```
+pip install tk
+```
+- **pillow:**
+```
+pip install pillow
+```
