@@ -5,9 +5,6 @@ João Vitor Farias Silva (jvfsilva@inf.ufpel.edu.br)
 
 Graziele Fagundes Martins (gfmartins@inf.ufpel.edu.br)
 
-
-Para saber mais detalhes da implementação acesse: **[Documentação](https://docs.google.com/document/d/1wjuW1kJKHCUQf5og_3ERMouvzWpndZdGRIGXOz40tPk/edit?usp=sharing)**
-
 Repositório composto pelos seguintes arquivos:
 - interface.py: responsável pela interface e por gerar a imagem calculada
 - raytracing.c: responsável pelo cálculo da cor do píxel da imagem gerada através de ray-tracing
