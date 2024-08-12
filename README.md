@@ -2,18 +2,17 @@
 Repositório composto pelos seguintes arquivos:
 - interface.py: responsável pela interface e por gerar a imagem calculada
 - raytracing.c: responsável pelo cálculo da cor do píxel da imagem gerada através de ray-tracing
-- raytracing.so: biblioteca compilada do raytracing.c que será usada pelo programa python
 - arquivos extras: arquivos de utilidade para o projeto.
 
-# Requerimentos
-Python e pillow
+## Linux
 
-# Rodando o projeto
-Para rodar o projeto verfique que você possui a biblioteca necessária rodando o comando:
+### Requisitos
+Antes de executar o projeto, certifique-se de ter os seguintes pacotes instalados:
+- **gcc**: Compilador C
 ```
-pip install pillow
+sudo apt-get install gcc
 ```
-Após instalada só resta rodar o código python:
+- **make**: Utilitário de automação de compilação
 ```
-python ./interface.py
+sudo apt install make
 ```
