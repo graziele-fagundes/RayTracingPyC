@@ -7,6 +7,7 @@ João Vitor Farias Silva (jvfsilva@inf.ufpel.edu.br) e Graziele Fagundes Martins
 Repositório composto pelos seguintes arquivos:
 - interface.py: responsável pela interface e por gerar a imagem calculada
 - raytracing.c: responsável pelo cálculo da cor do píxel da imagem gerada através de ray-tracing
+- Documentação.pdf: documentação do código implementado
 - Arquivos extras: arquivos de utilidade para o projeto.
   - .gitignore: arquivo de configuração que especifica quais arquivos e diretórios devem ser ignorados pelo Git
   - makefile: arquivo de automação de compilação
