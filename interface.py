@@ -5,7 +5,7 @@ import time
 
 
 PATH = './raytracing.so'
-raytracing = ctypes.CDLL(PATH)
+raytracing = ctypes.CDLL(PATH, winmode=0)
 raytracing.PerPixel.argtypes = [ctypes.c_float, ctypes.c_float]
 raytracing.PerPixel.restype = ctypes.c_int
 
