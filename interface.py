@@ -43,7 +43,7 @@ root = Tk()
 scale = 2.0
 width, height = 1280, 960
 
-root.title("Imagem gerada por ray tracing")
+root.title("Imagem gerada por Ray Tracing")
 
 # Centralizar a janela
 screen_width = root.winfo_screenwidth()
