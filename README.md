@@ -19,7 +19,7 @@ sudo apt install python3-pil
 sudo apt install python3-pil.imagetk
 ```
 
-### Executar
+### Execução
 Para compilar e executar o projeto, você pode usar o Makefile fornecido:
 ```
 make
@@ -29,3 +29,8 @@ Alternativamente, você pode compilar e executar manualmente com os seguintes co
 gcc -fPIC -shared -o raytracing.so raytracing.c utils.c
 python3 interface.py
 ```
+
+## Windows
+Antes de executar o projeto, é essencial garantir que os seguintes pacotes estejam instalados:
+- **gcc:**
+Para instalar gcc no windows recomendamos seguir o seguinte tutorial: [Como Instalar GCC/G++ MinGW no Windows](https://terminalroot.com.br/2022/12/como-instalar-gcc-gpp-mingw-no-windows.html)
