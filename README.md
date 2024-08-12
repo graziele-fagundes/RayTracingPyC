@@ -1,6 +1,9 @@
 # Ray Tracing Recursivo
-Uma implementação gráfica de Ray Tracing Recursivo utilizando em conjunto Python e C.
+Uma implementação gráfica de Ray Tracing Recursivo utilizando em conjunto Python e C. 
 
+João Vitor Farias Silva (jvfsilva@inf.ufpel.edu.br) e Graziele Fagundes Martins (gfmartins@inf.ufpel.edu.br)
+
+## Repositório
 Repositório composto pelos seguintes arquivos:
 - interface.py: responsável pela interface e por gerar a imagem calculada
 - raytracing.c: responsável pelo cálculo da cor do píxel da imagem gerada através de ray-tracing
