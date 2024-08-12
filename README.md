@@ -6,7 +6,7 @@ Repositório composto pelos seguintes arquivos:
 - raytracing.c: responsável pelo cálculo da cor do píxel da imagem gerada através de ray-tracing
 - arquivos extras: arquivos de utilidade para o projeto.
 
-## Linux
+##🖥️ Linux
 
 ### Requisitos
 Antes de executar o projeto, certifique-se de ter os seguintes pacotes instalados:
