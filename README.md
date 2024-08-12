@@ -1,5 +1,5 @@
 # Ray Tracing Recursivo
-### [Documentação](https://docs.google.com/document/d/1wjuW1kJKHCUQf5og_3ERMouvzWpndZdGRIGXOz40tPk/edit?usp=sharing)
+### Para saber mais detalhes da implementação acesse: [Documentação](https://docs.google.com/document/d/1wjuW1kJKHCUQf5og_3ERMouvzWpndZdGRIGXOz40tPk/edit?usp=sharing)
 
 Uma implementação gráfica de Ray Tracing Recursivo utilizando em conjunto Python e C. 
 
