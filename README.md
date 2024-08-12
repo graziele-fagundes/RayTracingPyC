@@ -18,3 +18,26 @@ sudo apt-get install gcc
 ```
 sudo apt install make
 ```
+- **python3**: Interpretador Python 3
+```
+sudo apt-get install python3.9
+```
+- **tkinter**: Toolkit para interfaces gráficas em Python
+```
+sudo apt install python3-tk
+```
+- **pillow**: Biblioteca de manipulação de imagens em Python
+```
+sudo apt install python3-pil
+sudo apt install python3-pil.imagetk
+```
+### Executar
+Para compilar e executar o projeto, você pode usar o Makefile fornecido:
+```
+make
+```
+Alternativamente, você pode compilar e executar manualmente com os seguintes comandos:
+```
+gcc -fPIC -shared -o raytracing.so raytracing.c utils.c
+python3 interface.py
+```
