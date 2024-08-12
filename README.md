@@ -31,6 +31,8 @@ python3 interface.py
 ```
 
 ## Windows
+
+### Requisitos
 Antes de executar o projeto, é essencial garantir que os seguintes pacotes estejam instalados:
 - **gcc:**
 Para instalar o pacote gcc no Windows, recomendamos seguir o seguinte tutorial: [Como Instalar GCC/G++ MinGW no Windows](https://terminalroot.com.br/2022/12/como-instalar-gcc-gpp-mingw-no-windows.html)
@@ -43,4 +45,15 @@ pip install tk
 - **pillow:**
 ```
 pip install pillow
+```
+
+### Execução
+Para compilar e executar o projeto, você pode usar o Makefile fornecido:
+```
+mingw32-make
+```
+Alternativamente, você pode compilar e executar manualmente com os seguintes comandos:
+```
+gcc -fPIC -shared -o raytracing.so raytracing.c utils.c
+python interface.py
 ```
