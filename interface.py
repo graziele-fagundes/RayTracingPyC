@@ -41,7 +41,7 @@ def render(width, height, scale):
 root = Tk()
 
 scale = 2.0
-width, height = 1280, 960
+width, height = 800, 600
 
 root.title("Imagem gerada por Ray Tracing")
 
