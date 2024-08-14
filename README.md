@@ -21,7 +21,7 @@ Antes de executar o projeto, é essencial garantir que os seguintes pacotes este
 ```
 sudo apt-get install gcc
 sudo apt install make
-sudo apt-get install python3.9
+sudo apt-get install python3.12
 sudo apt install python3-tk
 sudo apt install python3-pil
 sudo apt install python3-pil.imagetk
